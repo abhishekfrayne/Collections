@@ -1,27 +1,34 @@
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 
 public class coll1 {
 
 
     public static void main(String args[])
     {
-        Collection<Integer> c=new ArrayList<Integer>();
-        c.add(1);
-        c.add(2);
-        c.add(3);
+        List<Integer> c=new ArrayList<Integer>();
+        c.add(599);
+        c.add(113);
+        c.add(321);
 
+
+        Comparator<Integer>com=new comparator();
+        Collections.sort(c,com);
+
+
+        for(Integer i : c)
+        {
+            System.out.println(i);
+        }
+
+        /*
+        Collections.reverse(c);*/
        /* Iterator i=c.iterator();
         while(i.hasNext())
         {
 
             System.out.print(i.next());
         }*/
-        for(Integer i : c)
-        {
-            System.out.println(i);
-        }
+
 
     }
 }
